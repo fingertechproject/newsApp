@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
     fun shareNews() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.setType("text/plain")
+
         intent.putExtra(Intent.EXTRA_TEXT,newsList[index].url)
         startActivity(Intent.createChooser(intent,"Share this News "))
     }
